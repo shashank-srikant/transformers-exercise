@@ -18,7 +18,9 @@ B: batch size
 **3. Write a loss function which calculates batch-wise loss and optimizes the network.**  
 a. Tell me what the choice of loss function is.  
 b. Tell me how you will combine per sentence loss into a batch loss.  
-Run this until convergence on val-set, and report train, val, test-set results.  
+Run this until convergence on val-set, and report train, val, test-set results. 
+
+**4. Understand Pytorch's computation graph**: Understand how gradients are propogated, and play with it on toy problems like solving for A, B in A+B = 10.
 
 # Exercise 1 - PyTorch Hooks Exercise
 
