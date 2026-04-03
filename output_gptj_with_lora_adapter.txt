@@ -1,0 +1,13 @@
+Trainable parameter tensors: 224
+transformer.h.0.attn.k_proj.A torch.Size([4096, 2])
+transformer.h.0.attn.k_proj.B torch.Size([2, 4096])
+transformer.h.0.attn.v_proj.A torch.Size([4096, 2])
+transformer.h.0.attn.v_proj.B torch.Size([2, 4096])
+transformer.h.0.attn.q_proj.A torch.Size([4096, 2])
+.....
+
+Trainable parameters: 1835008
+Frozen parameters: 6050882784
+Epoch 1, Loss: 7.0594
+Epoch 2, Loss: 5.7069
+Epoch 3, Loss: 4.6308
