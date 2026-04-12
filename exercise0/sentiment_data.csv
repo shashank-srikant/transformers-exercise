@@ -1,0 +1,201 @@
+number,sentence,label
+1,"Just had the best iced coffee of my life, today is going to be amazing! #blessed",positive
+2,"Huge shoutout to the team for crushing that presentation today. Teamwork makes the dream work!",positive
+3,"I am absolutely obsessed with this new skincare line. My face has never felt smoother.",positive
+4,"Finally booked my flights to Italy! Can't wait for all the pasta and sunshine.",positive
+5,"The sunset tonight is absolutely breathtaking. Nature is the best artist.",positive
+6,"So proud of my sister for graduating today! You worked so hard for this.",positive
+7,"Just hit my 5k personal best! Feeling like I can conquer the world right now.",positive
+8,"Nothing beats a cozy Saturday morning with a good book and a warm blanket.",positive
+9,"This new restaurant in town is a 10/10. You HAVE to try the truffle fries.",positive
+10,"Surprise flowers from my best friend just made my whole week.",positive
+11,"I love how supportive this community is. Thank you all for the kind messages!",positive
+12,"That concert was hands down the best live performance I've ever seen.",positive
+13,"Finding a $20 bill in an old jacket is the ultimate Friday win.",positive
+14,"So happy with how this DIY project turned out. It’s perfect!",positive
+15,"Waking up to chirping birds and a cool breeze is the perfect start to the day.",positive
+16,"Can we talk about how good the new Marvel movie is? I'm blown away.",positive
+17,"My dog is the cutest thing on this planet. Look at those ears!",positive
+18,"Actually had a productive Monday for once. Feeling incredibly motivated.",positive
+19,"The customer service I received today was top-notch. Truly impressed.",positive
+20,"Got the job!! I'm so excited to start this new chapter.",positive
+21,"Warm cookies straight out of the oven are my love language.",positive
+22,"The energy at the game tonight was electric. So glad I went!",positive
+23,"Finally finished my painting. I’m really proud of the progress I’ve made.",positive
+24,"Seeing the northern lights has always been a dream, and tonight it came true.",positive
+25,"Kindness is free. Let's spread some today! #PositiveVibes",positive
+26,"I just realized I have 3 days off in a row. Best feeling ever.",positive
+27,"This playlist is a literal masterpiece. Every song is a bop.",positive
+28,"Had such a soul-cleansing hike today. The mountain air is everything.",positive
+29,"Grateful for the little things today, like a perfect avocado and no traffic.",positive
+30,"Successfully baked bread for the first time! It smells like heaven in here.",positive
+31,"Life is short, buy the shoes. No regrets!",positive
+32,"My garden is finally blooming and it’s making me so happy.",positive
+33,"Big thanks to the stranger who helped me with my groceries today.",positive
+34,"Nothing like a fresh haircut to make you feel like a brand new person.",positive
+35,"The new software update is actually great. Much faster than before.",positive
+36,"Spend time with people who make you feel like sunshine.",positive
+37,"The autumn leaves are finally changing colors. My favorite season!",positive
+38,"I just found out I'm going to be an aunt! Best news ever.",positive
+39,"Taking a moment to appreciate how far I’ve come this year.",positive
+40,"The pizza here is so cheesy and delicious. Literal perfection.",positive
+41,"Woke up feeling refreshed and ready to take on the world.",positive
+42,"Yoga this morning was exactly what my body needed.",positive
+43,"The comedy show tonight had me in literal tears. So funny!",positive
+44,"I love the smell of rain on hot pavement. Summer vibes.",positive
+45,"So glad I took the risk and started my own business. It's paying off!",positive
+46,"Found the perfect pair of vintage jeans today. Score!",positive
+47,"The community garden looks beautiful this year. Great job everyone.",positive
+48,"Feeling so much love on my birthday. Thank you for the wishes!",positive
+49,"A clean room and a fresh candle is the ultimate mood booster.",positive
+50,"The beach was so peaceful this morning. I could stay here forever.",positive
+51,"My flight is delayed for the third time today. I just want to go home.",negative
+52,"Why is the WiFi in this hotel so incredibly slow? I can't get anything done.",negative
+53,"Just dropped my phone and the screen shattered. 2026 is off to a great start.",negative
+54,"The customer service at this place is actually non-existent. Avoid at all costs.",negative
+55,"I paid $15 for a salad that was 90% wilted lettuce. Never again.",negative
+56,"Woke up with a massive headache and it’s raining. Fantastic.",negative
+57,"Traffic is a literal nightmare today. I've been sitting here for an hour.",negative
+58,"Another meeting that could have been an email. My time is being wasted.",negative
+59,"I'm so tired of people being rude for no reason. Be better.",negative
+60,"The new app update is so buggy. It crashes every five minutes.",negative
+61,"Spent two hours on hold just to be disconnected. I'm livid.",negative
+62,"My order arrived broken and now they want me to pay for return shipping.",negative
+63,"Is it just me, or is the air quality today absolutely terrible?",negative
+64,"I really regret buying these shoes. They gave me blisters within ten minutes.",negative
+65,"The ending of that book was so disappointing. I feel like I wasted my time.",negative
+66,"Nothing ruins a mood like a cold cup of coffee in the morning.",negative
+67,"I’m so sick of this endless winter. I need to see the sun.",negative
+68,"Had the worst experience at the DMV today. Total chaos.",negative
+69,"My favorite show just got canceled on a cliffhanger. My heart is broken.",negative
+70,"The noise from the construction next door is driving me insane.",negative
+71,"I tried the viral pasta recipe and it was honestly flavorless.",negative
+72,"Why does every 'unlimited' plan have so many hidden restrictions?",negative
+73,"I've been waiting for my food for 45 minutes and the place isn't even busy.",negative
+74,"Feeling really burnt out lately. Everything feels like a chore.",negative
+75,"The gym was so crowded I couldn't even find a single dumbbell.",negative
+76,"Losing my keys right when I'm late for work is my personal brand of hell.",negative
+77,"The seats on this bus are so cramped and uncomfortable.",negative
+78,"I'm so frustrated with the lack of communication on this project.",negative
+79,"Another day, another bill. When does it end?",negative
+80,"The movie was so boring I actually fell asleep in the theater.",negative
+81,"It’s 2 AM and my neighbors are blasting music. Some people have no respect.",negative
+82,"I really hate how expensive groceries have become lately.",negative
+83,"The 'waterproof' jacket I bought is definitely not waterproof. I'm soaked.",negative
+84,"Getting a flat tire on a Monday morning is just peak bad luck.",negative
+85,"I’m so over these constant social media ads. They are getting out of hand.",negative
+86,"The laptop I bought a month ago is already slowing down. Infuriating.",negative
+87,"I feel like I'm screaming into a void with this technical support team.",negative
+88,"The pizza was cold and the crust was like cardboard. Waste of money.",negative
+89,"I’m so tired of the drama in this group chat. Leaving now.",negative
+90,"Why is it so hard to find a decent pair of jeans that actually fit?",negative
+91,"The park was so covered in litter today. People are so careless.",negative
+92,"My skin is breaking out again for no reason. I'm so over it.",negative
+93,"That 'easy' assembly furniture took me five hours and a lot of swearing.",negative
+94,"I can't believe they changed the recipe. It tastes like chemicals now.",negative
+95,"The public transportation system in this city is a joke.",negative
+96,"I'm feeling so discouraged today. Nothing seems to be going right.",negative
+97,"The hotel room smelled like old cigarettes despite being non-smoking.",negative
+98,"My favorite local bakery closed down. This is the worst news.",negative
+99,"I’ve had this song stuck in my head for three days and I hate it.",negative
+100,"It's so humid outside I feel like I'm breathing through a warm towel.",negative
+101,"Just finished my lunch and now I'm back at my desk.",neutral
+102,"The weather today is cloudy with a slight chance of rain.",neutral
+103,"I am currently watching a documentary about deep-sea creatures.",neutral
+104,"The bus arrives every fifteen minutes on weekdays.",neutral
+105,"I need to go to the store and buy some milk and eggs.",neutral
+106,"This new phone comes in three different colors: black, white, and blue.",neutral
+107,"The meeting has been rescheduled to 3:00 PM tomorrow.",neutral
+108,"I just read an article about the history of the printing press.",neutral
+109,"The local library is open from 9 AM to 5 PM today.",neutral
+110,"The commute to the office takes approximately thirty minutes.",neutral
+111,"I'm wearing a grey sweater and blue jeans today.",neutral
+112,"The instructions for the new coffee maker are in the box.",neutral
+113,"The store is located on the corner of Main Street and Oak Avenue.",neutral
+114,"There are twelve units in this textbook for the semester.",neutral
+115,"I noticed that the leaves are starting to fall from the trees.",neutral
+116,"The oven needs to be preheated to 350 degrees for this recipe.",neutral
+117,"I am listening to a podcast about urban planning.",neutral
+118,"The train was on time this morning, which was expected.",neutral
+119,"The museum exhibit features several paintings from the 19th century.",neutral
+120,"I need to update my computer's operating system tonight.",neutral
+121,"The restaurant offers both indoor and outdoor seating options.",neutral
+122,"I spent the afternoon organizing my digital files.",neutral
+123,"The movie is two hours and fifteen minutes long.",neutral
+124,"I am drinking a glass of room-temperature water.",neutral
+125,"The grocery store was moderately busy for a Tuesday afternoon.",neutral
+126,"The park has a walking trail that is exactly two miles long.",neutral
+127,"I am planning to attend the town hall meeting next week.",neutral
+128,"The printer is currently out of black ink.",neutral
+129,"I saw a cat sitting on a fence on my way home.",neutral
+130,"The laptop has a battery life of about eight hours.",neutral
+131,"I am reading the terms and conditions for the new software.",neutral
+132,"The flight from New York to London takes about seven hours.",neutral
+133,"I have an appointment at the dentist at 10:00 AM.",neutral
+134,"The hotel offers free breakfast for all guests.",neutral
+135,"I am taking a walk around the neighborhood before dinner.",neutral
+136,"The new bridge construction is expected to be finished by July.",neutral
+137,"I found a pen that actually works on the first try.",neutral
+138,"The sunset occurs at 6:42 PM today.",neutral
+139,"I am learning how to use a new spreadsheet function.",neutral
+140,"The local news report covered the opening of the new park.",neutral
+141,"I am wearing a pair of neutral-colored shoes today.",neutral
+142,"The water in the lake is quite calm this afternoon.",neutral
+143,"I am going to change the lightbulb in the hallway.",neutral
+144,"The package is scheduled for delivery between 2 and 4 PM.",neutral
+145,"I am looking at a map of the hiking trails in the area.",neutral
+146,"The recipe calls for two tablespoons of olive oil.",neutral
+147,"The store has a sale on household items this week.",neutral
+148,"I am sitting in a chair and looking at my computer screen.",neutral
+149,"The clock on the wall is five minutes fast.",neutral
+150,"I am writing a list of things I need to do tomorrow.",neutral
+151,"Just saw a shooting star! Make a wish everyone.",positive
+152,"I finally mastered the art of making homemade gnocchi. It’s a game changer.",positive
+153,"Shoutout to the random stranger who complimented my outfit today. You made my day!",positive
+154,"My plants are actually thriving for once. My thumb is turning green!",positive
+155,"There is nothing like the smell of a brand new book. Peak happiness.",positive
+156,"Just finished a 10-mile bike ride. The view from the top was worth every pedal.",positive
+157,"I am so incredibly proud of my team for hitting our quarterly goal early!",positive
+158,"Found a hidden gem of a coffee shop that plays the best lo-fi beats.",positive
+159,"Waking up without an alarm on a Sunday is the ultimate luxury.",positive
+160,"This new skincare routine has my face glowing. I feel like a new person.",positive
+161,"The local farmer's market had the best strawberries I've ever tasted.",positive
+162,"I just got accepted into the workshop I’ve been eyeing for months!",positive
+163,"Spending the evening watching the city lights. Life is beautiful.",positive
+164,"Finally hit 1,000 followers on my art page! Thank you all for the support.",positive
+165,"The ocean breeze always has a way of resetting my brain. So peaceful.",positive
+166,"I just realized it’s a long weekend. Let the relaxation begin!",positive
+167,"My favorite band just announced a world tour. I am screaming!",positive
+168,"I’ve been waiting for this package for two weeks and it arrived damaged.",negative
+169,"Why is it that every time I wash my car, it rains the very next day?",negative
+170,"The amount of plastic packaging in this box is absolutely ridiculous.",negative
+171,"My computer decided to run a mandatory update right in the middle of a meeting.",negative
+172,"I’ve had a headache for five hours and the medicine isn't touching it.",negative
+173,"The customer service representative hung up on me after I waited an hour.",negative
+174,"I really wanted to like this movie, but the plot was a complete mess.",negative
+175,"Is there anything worse than stepping in a puddle with fresh socks on?",negative
+176,"I’m so frustrated with the lack of transparency in this company.",negative
+177,"Tried to go for a run but the air is so thick with humidity I couldn't breathe.",negative
+178,"The new interface for this app is so confusing. Why fix what wasn't broken?",negative
+179,"I’m officially done with dating apps. It’s just a sea of disappointment.",negative
+180,"My grocery bill just doubled for the exact same items I bought last month.",negative
+181,"Got a parking ticket for being five minutes late. Just my luck.",negative
+182,"The coffee I just bought tastes like literal dishwater. Total waste.",negative
+183,"I feel like I'm running on a treadmill and getting absolutely nowhere.",negative
+184,"The neighbors are having a screaming match at 3 AM. I am so tired.",negative
+185,"The elevator is currently out of service for routine maintenance.",neutral
+186,"I am looking at a list of ingredients for a chocolate cake recipe.",neutral
+187,"The temperature outside is exactly 68 degrees Fahrenheit.",neutral
+188,"I am currently wearing a pair of black noise-canceling headphones.",neutral
+189,"The document is printed in 12-point Times New Roman font.",neutral
+190,"I noticed that the streetlights turn on at exactly 7:15 PM.",neutral
+191,"The bus route has four stops between my house and the library.",neutral
+192,"I am reading a Wikipedia entry about the history of salt.",neutral
+193,"The store closes in twenty minutes, according to the sign on the door.",neutral
+194,"I am organizing my socks by color and thickness today.",neutral
+195,"The meeting room has a large mahogany table and six chairs.",neutral
+196,"I am currently drinking a cup of unsweetened green tea.",neutral
+197,"The podcast episode I'm listening to is about renewable energy.",neutral
+198,"I noticed that the battery on my watch is at fifty percent.",neutral
+199,"The car in front of me is a silver sedan with a local license plate.",neutral
+200,"I am finishing the last sentence of this data entry task.",neutral
