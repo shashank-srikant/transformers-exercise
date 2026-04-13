@@ -98,11 +98,14 @@ class Dataset:
 
 def train():
     dataset = Dataset()
-    num_epochs = 100
+    num_epochs = 1000
     batch_size = 16
     lr = 0.01
-    total_samples = 0
-    total_val_loss = 0
+
+    is_early_stopped = False
+    best_validation_loss = float("inf")
+    val_loss_patience_level = 10
+    patience_counter = 0
 
     model = SentimentClassifier(
         vocab_size=len(dataset.vocab_index),
@@ -115,6 +118,10 @@ def train():
 
     for epoch in range(num_epochs):
         # training phase
+        total_samples = 0
+        total_val_loss = 0
+        total_correct = 0
+
         for iteration in range(0, len(dataset.train_dataset), batch_size):
             batch_sentences = dataset.train_dataset["sentence"][
                 iteration : iteration + batch_size
@@ -135,12 +142,7 @@ def train():
             loss.backward()
             optimizer.step()  # weight update
 
-        print(
-            f"Epoch: {epoch},Loss: {total_val_loss / total_samples if total_samples > 0 else 0:.4f}"
-        )
         # validation phase
-        total_correct = 0
-
         with torch.no_grad():
             for iteration in range(0, len(dataset.val_dataset), batch_size):
                 batch_sentences = dataset.val_dataset["sentence"][
@@ -161,13 +163,50 @@ def train():
                 total_samples += batch_labels.size(0)
 
                 loss = criterion(logits, batch_labels)
-
                 total_val_loss += loss.item() * len(batch_labels)
 
-                print(
-                    f"Accuracy: {total_correct / total_samples if total_samples > 0 else 0:.4f}"
-                )
-                print(f"Validation Iteration: {iteration}, Loss: {loss.item()}")
+            # This is for early stopping.
+            avg_val_loss = total_val_loss / total_samples if total_samples > 0 else 0
+            if avg_val_loss < best_validation_loss:
+                best_validation_loss = avg_val_loss
+                patience_counter = 0
+            else:
+                patience_counter += 1
+
+            if patience_counter >= val_loss_patience_level:
+                print(f"Early stopping triggered at epoch {epoch}")
+                is_early_stopped = True
+                break
+
+        if is_early_stopped:
+            break
+
+    print("Training Completed. Saving model to sentiment_model.pt")
+    torch.save(model.state_dict(), "sentiment_model.pt")
+
+    total_test_samples = 0
+    total_test_correct = 0
+    with torch.no_grad():
+        for iteration in range(0, len(dataset.test_dataset), batch_size):
+            batch_sentences = dataset.test_dataset["sentence"][
+                iteration : iteration + batch_size
+            ]
+            batch_labels = dataset.test_dataset["label"][
+                iteration : iteration + batch_size
+            ]
+
+            batch_indices = dataset.batch_index(batch_sentences)
+            batch_labels = torch.tensor(
+                [dataset.target_index[label] for label in batch_labels]
+            )
+
+            logits = model.forward(batch_indices)
+            predictions = torch.argmax(logits, dim=1)
+            total_test_correct += (predictions == batch_labels).sum().item()
+            total_test_samples += batch_labels.size(0)
+    print(
+        f"Test Accuracy: {total_test_correct / total_test_samples if total_test_samples > 0 else 0:.4f}"
+    )
 
 
 if __name__ == "__main__":
@@ -233,6 +272,8 @@ Q1: Input data can have sentences of varying lengths. How do we handle that?
 - We can pad the sentences, eg: "I love this movie" becomes [1,2,3,4] and "good" becomes [5,0,0,0].
 - Later when mean pooling, padded values should be ignored.
 
-Q2:
+Q2: Why early stopping is used? What is patience level? 
+- If validation loss doesn't improve for patience_level number of times, training is stopped. 
+- This is to prevent overfitting as model due to a dense network can learn noise in the training data. 
 
 """
