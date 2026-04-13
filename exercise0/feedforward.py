@@ -43,6 +43,8 @@ Q2: Why do we need to zero the gradients after each update?
 Q3: What is the purpose of loss.backward()?
 - It computes the gradients of the loss with respect to the parameters (A and B in this case) using backpropagation.
 
+Q4: Why should the computation graph be acyclic? How does computation graph work for recurrent neural networks?
+- An acyclic graph ensures that there are no loops, which allows for proper gradient computation.
 
 Chain Rule:
 Say we have function:

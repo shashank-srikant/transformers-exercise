@@ -239,10 +239,11 @@ The batches are stacked, so we have a 2x4 matrix. (batch_size * sequence_length)
 After embedding lookup, we get 2x4x3 matrix. (batch_size * sequence_length * embedding_dim)
 because, each of 4 sequences in both sentences in represented by a vector of 3 dimensions as:
 [
-[[0.1, 0.2, 0.3], [0.4, 0.5, 0.6], [0.7, 0.8, 0.9], [0.2, 0.3, 0.4]],
-[[0.1, 0.2, 0.3], [0.5, 0.6, 0.7], [0.7, 0.8, 0.9], [0.2, 0.3, 0.4]]
+    [[0.1, 0.2, 0.3], [0.4, 0.5, 0.6], [0.7, 0.8, 0.9], [0.2, 0.3, 0.4]],
+    [[0.1, 0.2, 0.3], [0.5, 0.6, 0.7], [0.7, 0.8, 0.9], [0.2, 0.3, 0.4]]
 ]
 
+---
 Q1: Why ReLU activation function is used in the hidden layers?
 - ReLU (Rectified Linear Unit) is computationally efficient and introduces non-linearity, allowing the model to learn complex patterns in the data.
 - It helps to mitigate the vanishing gradient problem, which can occur with other activation functions like sigmoid or tanh,
