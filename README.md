@@ -1,10 +1,12 @@
 # Exercise 0 - Pytorch, Loss functions fundamentals
+**1. Understand Pytorch's computation graph**: 
+Understand how gradients are propogated, and play with it on toy problems like solving for A, B in A+B = 10.
 
-**1. Model choice:**  
+**2. Model choice:**  
 M1: Create a simple feed forward network containing two intermediate layers  
 M2: use a bert-style encoder (and find out the difference between bert style encoder vs. gpt style decoder)  
 
-**2. Data:** 200 total sentences with ground-truth emotion (positive/negative/neutral)  
+**3. Data:** 200 total sentences with ground-truth emotion (positive/negative/neutral)  
 Data split:  
 100: train  
 50: val  
@@ -15,12 +17,10 @@ W: vocab length
 N: tokens per batch  
 B: batch size  
 
-**3. Write a loss function which calculates batch-wise loss and optimizes the network.**  
+**4. Write a loss function which calculates batch-wise loss and optimizes the network.**  
 a. Tell me what the choice of loss function is.  
 b. Tell me how you will combine per sentence loss into a batch loss.  
 Run this until convergence on val-set, and report train, val, test-set results. 
-
-**4. Understand Pytorch's computation graph**: Understand how gradients are propogated, and play with it on toy problems like solving for A, B in A+B = 10.
 
 # Exercise 1 - PyTorch Hooks Exercise
 
@@ -59,3 +59,16 @@ Working code that demonstrates:
 - Forward hook capturing Q, K, V matrices
 - Relevant hook capturing and modifying gradients
 - Before/after comparison of Q, K, V weights
+
+
+# Exercise 3: Rnn, Bag of Words, Embeddings, Encoder, Decoder
+1. Implement Embed layer from scratch
+2. If you implement a KV-pair for an embedding layer, how will backpropagation work?
+3. If an embed module is implemented using a KV-pair, does that affect backprop when training an RNN? or does it only affect training the embed layer itself? (see line 20 in https://github.com/shashank-srikant/transformers-exercise/blob/ex_0/exercise0/sentiment.py)
+{
+    a: [1, 0, 0]
+    the: [0, 1, 0]
+    and: [1, 1, 0]
+}
+4. Then how do you really go from embedding to input token?
+5. In the generative model discussed above, how will e_{i+1} be realized (write code).
