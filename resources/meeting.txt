@@ -1,0 +1,72 @@
+--------------------
+April 16 2026
+--------------------
+
+discrete bag of words: 2-gram, 3-gram, N-gram
+I am a beautiful dog.
+I am:
+am a:
+beautiful dog:
+dog .:
+
+----------------------------
+Continuous bag of words
+----------------------------    
+    x_N, x_N-1, x_N-2, ..., x1, x0 -->    [RNN block]
+    
+    embedding/vector rep of a word (1xd)    ---> [RNN block] --> hidden rep (1xd)
+    hidden representation of the input (1xd)--|
+    
+    timesteps:
+    x0 -> Embed(x0) -> e0        -> [RNN block] -> h1
+    entire sent collapsed         ->
+    randomly initialized vector (h0)
+    
+    e0, h0 -> RNN -> h1
+______________________|    
+-->    e1, h1 -> RNN -> h2
+______________________|    
+-->    e2, h2 -> RNN -> h3
+GRU, LRU -- 
+
+=========================
+choice 1: h_naive = \frac{\sigma(e_i)}{N}
+choice 2: h_rnn
+choice 3: h_attn {choice 3 >> 2 > 1}
+|
+feed_forward
+sigmoid
+BCE
+
+sentiment classification?
+s1 = w1, w2, w3, w4
+[RNN block]
+
+
+generative models:
+h_i -> [RNN generator]     -> h_{i+1}
+                        -> e_{i+1} -> token_{i+1}
+
+complete the sentence: I am a beautiful dog. [eos]
+encoder:
+e0, h0 -> h1 
+e1, h1 -> h2 
+e2, h2 -> h3 
+e3, h3 -> h4 
+e4, h4 -> h5
+
+until wN -> [eos]
+    h5 -> decoder -> h6, e6     : e6 -> w6
+    h6 -> decoder -> h7, e7        : e7 -> w7
+    ...
+                    
+1. Implement Embed layer from scratch
+2. If you implement a KV-pair for an embedding layer, how will backpropagation work?
+3. If an embed module is implemented using a KV-pair, does that affect backprop when training an RNN? or does it only affect training the embed layer itself? (see line 20 in https://github.com/shashank-srikant/transformers-exercise/blob/ex_0/exercise0/sentiment.py)
+{
+    a: [1, 0, 0]
+    the: [0, 1, 0]
+    and: [1, 1, 0]
+}
+4. Then how do you really go from embedding to input token?
+5. In the generative model discussed above, how will e_{i+1} be realized (write code).
