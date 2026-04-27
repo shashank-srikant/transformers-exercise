@@ -47,7 +47,7 @@ class Dataset:
         self.load_dataset()
 
     def _get_sequence_length(self):
-        df = pd.read_csv("exercise0/sentiment_data.csv")
+        df = pd.read_csv("balaram/sentiment_data.csv")
         max_len = 0
         for sentence in df["sentence"]:
             length = len(sentence.split())
