@@ -1,8 +1,9 @@
+import os
+
 import pandas as pd
 import torch
 import torch.nn as nn
-
-from solutions.exercise0.embeddings import RNNEncoder
+from embeddings import RNNEncoder
 
 
 class SentimentClassifier(nn.Module):
@@ -11,7 +12,7 @@ class SentimentClassifier(nn.Module):
 
         self.activation_fn = nn.ReLU()
         self.encoder = RNNEncoder(vocab_size, embedding_dim, hidden_dim)
-        self.hidden_layer1 = nn.Linear(embedding_dim, hidden_dim)
+        self.hidden_layer1 = nn.Linear(hidden_dim, hidden_dim)
         self.hidden_layer2 = nn.Linear(hidden_dim, hidden_dim)
 
         self.output_layer = nn.Linear(hidden_dim, output_dim)
@@ -63,7 +64,10 @@ class Dataset:
         return {0: "positive", 1: "negative", 2: "neutral"}
 
     def load_dataset(self):
-        df = pd.read_csv("exercise0/sentiment_data.csv")
+        file_path = "sentiment_data.csv"
+        script_path = __file__
+        absolute_file_path = os.path.join(os.path.dirname(script_path), file_path)
+        df = pd.read_csv(absolute_file_path)
 
         # shuffle to ensure randomness
         df = df.sample(frac=1, random_state=42).reset_index(drop=True)
