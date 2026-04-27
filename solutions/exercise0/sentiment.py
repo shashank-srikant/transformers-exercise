@@ -2,14 +2,15 @@ import pandas as pd
 import torch
 import torch.nn as nn
 
+from solutions.exercise0.embeddings import RNNEncoder
+
 
 class SentimentClassifier(nn.Module):
     def __init__(self, vocab_size, embedding_dim, hidden_dim, output_dim):
         super().__init__()
 
-        self.embedding = nn.Embedding(vocab_size, embedding_dim)
         self.activation_fn = nn.ReLU()
-
+        self.encoder = RNNEncoder(vocab_size, embedding_dim, hidden_dim)
         self.hidden_layer1 = nn.Linear(embedding_dim, hidden_dim)
         self.hidden_layer2 = nn.Linear(hidden_dim, hidden_dim)
 
@@ -17,10 +18,13 @@ class SentimentClassifier(nn.Module):
         # self.output_activation_fn = nn.CrossEntropyLoss()
 
     def forward(self, text):
-        embedded = self.embedding(text)
-        pooled_embedding = embedded.mean(dim=1)
+        # embedded = self.embedding(text)
+        # pooled_embedding = embedded.mean(dim=1)
+        # embedding = pooled_embedding
 
-        hidden_output1 = self.hidden_layer1(pooled_embedding)
+        embedding = self.encoder(text)
+
+        hidden_output1 = self.hidden_layer1(embedding)
         activated1 = self.activation_fn(hidden_output1)
 
         hidden_output2 = self.hidden_layer2(activated1)
